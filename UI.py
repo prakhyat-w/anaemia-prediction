@@ -15,21 +15,22 @@ def main():
     st.set_page_config(page_title='Anaemia Prediction')
     page_bg_img = '''
     <style>
-    .appview-container.st-emotion-cache-1yiq2ps.ea3mdgi9 {
+    body {
+    width: 5%
     background-image: url("https://www.healthcareradius.in/cloud/2022/01/04/eCdRaUvB-anaemia-1200x900.jpeg");
     background-size: cover;
     }
-    .st-emotion-cache-1n76uvr.e1f1d6gn2{
-    background-color: white;
-    width: 110%;
-    border-radius: 15px;
-    padding: 50px 50px 50px 50px;
-    }
+    .st-emotion-cache-yfhhig, .ef3psqc4, .st-emotion-cache-1wbqy5l, .e17vllj40{ display: none;}
+    .block-container, .st-emotion-cache-13ln4jf, .ea3mdgi5 {
+    background-color: #0a1d3b;
+    padding: 5vw;
+    border-radius: 5%}
+    .main {background-image: url("https://getwallpapers.com/wallpaper/full/9/2/0/1329002-full-size-blood-red-wallpaper-1920x1200-for-4k.jpg");}
     </style>
     '''
 
     st.markdown(page_bg_img, unsafe_allow_html=True)
-    st.title("Anaemia Prediction")
+    st.markdown('''<h1 style = "text-align: center;" > Anaemia Prediction</h1>''',unsafe_allow_html=True)
     st.markdown("---")
     text = fetch_message()
     if text is not None:
@@ -37,6 +38,7 @@ def main():
     else:
         None
 
+    st.caption('made by- Prakhyat')
     with st.form(key='values'):
         red = st.slider("Enter Red pixel percentage",39,54,40)
         green = st.slider("Enter Green pixel percentage",25,32,28)
