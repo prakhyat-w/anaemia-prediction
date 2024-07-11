@@ -1,6 +1,6 @@
 import pickle
 
-with open ('anaemia-prediction\Anaemia prediction new','rb') as f:
+with open ('Anaemia prediction new','rb') as f:
     model = pickle.load(f)
 
 def prediction (red,green,blue,hb,M):
